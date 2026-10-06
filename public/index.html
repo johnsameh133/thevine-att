@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Vine Attendance</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <section id="login-page" class="page" hidden>
+    <div class="card">
+      <h1>The Vine Attendance</h1>
+      <p class="subtitle">Admin sign in</p>
+      <form id="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" autocomplete="username" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" autocomplete="current-password" required />
+
+        <p id="login-error" class="error-text" hidden></p>
+
+        <button type="submit" id="login-btn">Log In</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- SCANNER PAGE -->
+  <section id="scanner-page" class="page" hidden>
+    <header class="topbar">
+      <h1>The Vine Attendance</h1>
+      <button id="logout-btn" class="link-btn">Log out</button>
+    </header>
+
+    <div class="card">
+      <div id="reader"></div>
+
+      <div class="scan-controls">
+        <button id="start-scan-btn">Start Scanning</button>
+        <button id="stop-scan-btn" hidden>Stop Scanning</button>
+      </div>
+
+      <p id="scan-status" class="status-text"></p>
+    </div>
+  </section>
+
+  <!-- RESULT MODAL -->
+  <div id="result-modal" class="modal-overlay" hidden>
+    <div class="modal">
+      <div id="modal-icon" class="modal-icon"></div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-message"></p>
+      <div id="modal-details" class="modal-details"></div>
+      <button id="modal-close-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="vendor/html5-qrcode.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

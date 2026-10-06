@@ -1,0 +1,14 @@
+{
+  "name": "the-vine-attendance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QR attendance scanner for admins",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --env-file=.env server.js"
+  },
+  "engines": {
+    "node": ">=20.6"
+  }
+}
